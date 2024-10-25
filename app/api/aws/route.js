@@ -4,10 +4,10 @@ import { NextResponse } from "next/server";
 // Call DescribeSecurityGroups and display the result.
 export  async function GET() {
   const client = new EC2Client({
-    region: "ap-south-1", // Add your AWS region
+    region: process.env.AWS_REGION, // Add your AWS region
     credentials: {
-      accessKeyId: 'AKIAW3MEBTQOFWOGJAJW', // Make sure these env vars are set
-      secretAccessKey: 'sKCOp0rqta32zt3X8MAsgUjFIvmYPYBqXiFqBDEn',
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID, // Make sure these env vars are set
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     },
   });
 
