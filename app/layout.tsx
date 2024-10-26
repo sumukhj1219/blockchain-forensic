@@ -3,7 +3,7 @@ import './globals.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
       <html lang="en">
         <head>
           <meta charSet="UTF-8" />
@@ -12,16 +12,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </head>
         <body>
           <header>
-            <SignedOut>
+            {/* <SignedOut>
               <SignInButton />
             </SignedOut>
             <SignedIn>
               <UserButton />
-            </SignedIn>
+            </SignedIn> */}
           </header>
           <main>{children}</main>
         </body>
       </html>
-    </ClerkProvider>
   );
 }
